@@ -1,0 +1,7 @@
+Development region: eu-north-1 (Stockholm)
+Account ID: [REDACTED]
+Created the IAM User with the following details:
+Name: AdminUser
+Password: [REDACTED - use GitHub Secrets]
+Access Key ID: [REDACTED - stored as GitHub Secret AWS_ACCESS_KEY]
+Access Secret Key: [REDACTED - stored as GitHub Secret AWS_SECRET_KEY]

@@ -1,0 +1,51 @@
+# Environment & secrets — NEVER commit these
+.env
+*.csv
+*.pem
+*.key
+login-details.txt
+
+# Terraform working files
+terraform/.terraform/
+terraform/.terraform.lock.hcl
+terraform/tfplan
+terraform/*.tfstate
+terraform/*.tfstate.backup
+terraform/terraform.tfvars
+terraform/override.tf
+terraform/override.tf.json
+terraform/*_override.tf
+terraform/*_override.tf.json
+
+# Lambda build artifacts & installed dependencies (CI installs these)
+lambda/lambda_function.zip
+lambda/__pycache__/
+lambda/*.pyc
+lambda/*.dist-info/
+lambda/*.egg-info/
+lambda/boto3/
+lambda/botocore/
+lambda/PIL/
+lambda/Pillow/
+lambda/pillow/
+lambda/s3transfer/
+lambda/urllib3/
+lambda/dateutil/
+lambda/jmespath/
+lambda/six.py
+lambda/bin/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+dist/
+build/
+*.egg-info/
+venv/
+env/
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db
