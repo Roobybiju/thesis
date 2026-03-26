@@ -7,6 +7,12 @@ terraform {
   }
 
   required_version = ">= 1.5.0"
+
+  backend "s3" {
+    bucket = "terraform-state-roobybiju-thesis"
+    key    = "thesis/terraform.tfstate"
+    region = "eu-north-1"
+  }
 }
 
 provider "aws" {

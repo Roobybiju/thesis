@@ -40,6 +40,15 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY }}
           aws-region: eu-north-1
 
+      # ── 4b. Ensure Terraform state bucket exists ─────────────────────
+      - name: Create Terraform state bucket if not exists
+        run: |
+          aws s3api head-bucket --bucket terraform-state-roobybiju-thesis 2>/dev/null || \
+          aws s3api create-bucket \
+            --bucket terraform-state-roobybiju-thesis \
+            --region eu-north-1 \
+            --create-bucket-configuration LocationConstraint=eu-north-1
+
       # ── 5. Terraform ─────────────────────────────────────────────────
       - name: Set up Terraform
         uses: hashicorp/setup-terraform@v3
